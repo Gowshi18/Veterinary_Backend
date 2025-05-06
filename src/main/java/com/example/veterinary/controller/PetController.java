@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/pets")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin
 public class PetController {
 
     @Autowired
     private PetService petService;
 
-    @PostMapping("/register")
+    @PostMapping("/register-pet")
     public Pet registerPet(@RequestBody Pet pet, @RequestParam String ownerEmail) {
         return petService.savePet(pet, ownerEmail);
     }

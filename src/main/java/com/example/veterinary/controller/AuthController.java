@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 import java.util.Optional;
 
-@CrossOrigin(origins = "*") // Allow frontend to connect
+@CrossOrigin(origins = "http://localhost:5173") // Allow frontend to connect
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
